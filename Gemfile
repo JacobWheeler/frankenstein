@@ -29,6 +29,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'faker'
 gem 'devise'
+gem 'youtube-embed'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

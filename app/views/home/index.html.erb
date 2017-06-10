@@ -1,2 +1,20 @@
 <h2>Welcome <%= current_user.first_name %> </h2>
+
+<% if current_user.movies.any?%>
+    <%current_user.movies do |movie|%>
+    <ul>
+        <li>
+            <%= movie.title %>
+            <%=link_to 'Movie Details', movie_path%>
+        </li>
+    </ul>
+<% end %>
+<% else %>
+    <h3> Add movies to your library </h3>
+<% end %>
+
+
+
+
+<%= link_to 'View Full Library', libraries_path%>
 <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
