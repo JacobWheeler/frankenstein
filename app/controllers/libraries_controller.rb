@@ -1,18 +1,36 @@
 class LibrariesController < ApplicationController
-  
+  before_action :set_library, only: [:edit, :show, :update, :destroy]
+  # USER CAN CREATE LIBRARIES
+  #LIBRARIES HAS MANY MOVIES
+
   def index
     @libraries = Library.all
-    @movies = Movie.all
   end
 
   def show
+    @movies = Movie.all
   end
 
   def edit
   end
 
   def new
+    @library = Library.new
   end
+
+  def create
+    @library = Library.new(library_params)
+    if @library.save
+      redirect_to @library
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @library.destroy
+    redirect_to libraries_path
+  end  
 
   private
 

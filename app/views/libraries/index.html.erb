@@ -3,17 +3,18 @@
 <table>
 <thead>
     <tr>
-        <h3>Title</h3>
+        <h3>Title </h3>
     </tr>
     <br />
 </thead>
 <tbody>
-    <% @movies.each do |movie| %>
+    <% @libraries.each do |library| %>
         <ul>
-            <li> <%= @movie.title %> </li>
-            <%= button_to 'Movie Details', movie_path(movie_params) %>
-            <%= button_to 'Delete Movie', movie_path, method: :destroy %>
+            <li> <%= library.title %> </li>
+            <%= link_to 'See Movies', library_path(library), class: 'btn' %>
+            <%= link_to 'Delete Library', library, method: :delete %>
         </ul>
     <% end %>
+    <%= link_to 'Add Movies', library_movies_path(:library_id)%>
 </tbody>
 </table>

@@ -1,2 +1,17 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>The Future of Movies!</h1>
+<table>
+<thead>
+    <tr>
+        <h3>Title </h3>
+    </tr>
+    <br />
+</thead>
+<tbody>
+    <% @movies.each do |movie| %>
+        <ul>
+            <li> <%= movie.title %> </li>
+             <%= link_to 'See Movie', movie_path(movie), class: 'btn' %>
+        </ul>
+    <% end %>
+</tbody>
+</table>

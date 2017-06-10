@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :libraries
-  resources :movies
-  
+  resources :libraries do
+    resources :movies
+  end
+
+  get '/movie', to: 'movies#movie'
+
 end

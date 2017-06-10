@@ -10,11 +10,11 @@
     </ul>
 <% end %>
 <% else %>
-    <h3> Add movies to your library </h3>
+    <h3> Please Create a Library </h3>
 <% end %>
 
 
 
 
-<%= link_to 'View Full Library', libraries_path%>
-<%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+<%= link_to 'Create Library', new_library_path%>
+<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>

@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_library
+  before_action :set_movie, only: [:show, :edit, :update, :destroy, :movie]
   def index
-    @movies = Movies.all
+    @movies = Movie.all
   end
 
   def edit
@@ -10,12 +11,16 @@ class MoviesController < ApplicationController
   def show
   end
 
+  def movie
+    render :show
+  end
+
   def new
-    @movie = Movie.new
+    @movie = @library.movies.new
   end
 
   def create
-    @movie = Movie.new(movie_params)
+    @movie = Library.movies.new(movie_params)
     if @movie.save
       redirect_to @movie
     else
@@ -40,6 +45,10 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:title, :duration, :genre, :description, :trailer)
+  end
+
+  def set_library
+    @library = Library.find(params[:library_id])
   end
 
   def set_movie

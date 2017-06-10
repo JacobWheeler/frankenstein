@@ -1,6 +1,6 @@
 <h1><%= @movie.title%></h1>
 <%= @movie.duration%>
 <%= @movie.genre%>
-<%= @movie.description%>
+<%= button_to 'Movie Details',  @movie.description %>
 <br />
 <iframe width="800" height="600" src=<%= @movie.trailer %>> </iframe>
