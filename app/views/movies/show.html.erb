@@ -1,6 +1,9 @@
+<div class='center-movie'>
 <h1><%= @movie.title%></h1>
 <%= @movie.duration%>
+<br />
 <%= @movie.genre%>
-<%= button_to 'Movie Details',  @movie.description %>
+<%= button_to 'Movie Details',  @movie.description, class: 'btn btn-warning' %>
 <br />
 <iframe width="800" height="600" src=<%= @movie.trailer %>> </iframe>
+</div>

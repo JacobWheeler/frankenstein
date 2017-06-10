@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :movies
   end
 
-  get '/movie', to: 'movies#movie'
+  get '/movie/:id', to: 'movies#movie'
 
+  get '/addmovie/:id', to: 'home#add_to_library', as: 'add_to_library'
+  delete 'deletemovie/:id', to: 'home#delete_from_library', as: 'delete_from_library'
 end

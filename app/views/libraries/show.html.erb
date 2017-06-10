@@ -11,8 +11,14 @@
     <% @movies.each do |movie| %>
         <ul>
             <li> <%= movie.title %> </li>
-            <%= link_to 'Movie Details', library_movie_path(@library, movie), class: 'btn' %>
-            <%= button_to 'Delete Movie', library_movie_path(@library, movie[:id]), method: :destroy %>
+            <%= link_to 'Movie Details', library_movie_path(@library, movie), class: 'btn btn-success' %>
+            <%= link_to 'Add Movie', add_to_library_path(movie), class: 'btn btn-warning' %>
+            <%= link_to 'Delete',
+                      delete_from_library_path(movie),
+                      class: 'btn btn-danger',
+                      data: { confirm: 'Really Delete?'},
+                      method: :delete
+           %>
         </ul>
     <% end %>
     <%= link_to 'Add Movies!!', library_movies_path(@library)%>
