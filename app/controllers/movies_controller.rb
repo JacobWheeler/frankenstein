@@ -41,6 +41,8 @@ class MoviesController < ApplicationController
     redirect_to movies_path, notice: 'Movie Deleted'
   end
 
+
+
   private
 
   def movie_params

@@ -10,9 +10,10 @@
     <% @movies.each do |movie| %>
         <ul>
             <li> <%= movie.title %> </li>
-             <%= link_to 'See Movie', movie_path(movie), class: 'btn btn-warning' %>
+             <%= link_to 'See Movie', library_movie_path(movie), class: 'btn btn-warning' %>
              <%= link_to 'Add to Library', add_to_library_path(:movie_id), class: 'btn btn-primary', method: :post, data: { confirm: 'Added to library!' } %>
         </ul>
     <% end %>
+
 </tbody>
 </table>

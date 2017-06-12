@@ -9,6 +9,7 @@ class LibrariesController < ApplicationController
 
   def show
     @movies = Movie.all
+    @movies = Movie.paginate(page: params[:page], :per_page => 5)
   end
 
   def edit

@@ -21,6 +21,8 @@
            %>
         </ul>
     <% end %>
-    <%= link_to 'Add Movies!!', library_movies_path(@library)%>
+    <%= will_paginate @movies, renderer: BootstrapPagination::Rails %>
+    <br />
+    <%= link_to 'Add Movies!!', library_movies_path(@library), class: 'btn btn-success'%>
 </tbody>
 </table>

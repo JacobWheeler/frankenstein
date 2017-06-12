@@ -16,17 +16,17 @@ ActiveRecord::Schema.define(version: 20170610161151) do
   enable_extension "plpgsql"
 
   create_table "libraries", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "duration"
-    t.string "genre"
-    t.string "description"
-    t.string "trailer"
+    t.string "title", null: false
+    t.string "duration", null: false
+    t.string "genre", null: false
+    t.string "description", null: false
+    t.string "trailer", null: false
     t.bigint "library_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170610161151) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
+    t.string "first_name", null: false
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
