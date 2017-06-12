@@ -1,0 +1,46 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jacobwheeler/Desktop/DPL/week4/frankenstein/app/models/library.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/jacobwheeler/Desktop/DPL/week4/frankenstein/spec/models/movie_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/jacobwheeler/Desktop/DPL/week4/frankenstein/app/models/movie.rb": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jacobwheeler/Desktop/DPL/week4/frankenstein/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1497303482
+  }
+}

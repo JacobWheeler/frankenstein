@@ -1,3 +1,6 @@
 --require spec_helper
+<<<<<<< HEAD
 --color
 --format documentation
+=======
+>>>>>>> random changes
