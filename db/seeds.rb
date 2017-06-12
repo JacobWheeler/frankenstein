@@ -116,7 +116,7 @@ library.movies.create(
         duration: '1hr 38min',
         genre: 'Comedy',
         description: 'http://www.imdb.com/title/tt0372588/',
-        trailer: 'https://www.youtube.com/embed/20CRw3XdETA'
+        trailer: 'https://www.youtube.com/embed/RPBX47zSktc'
 )
 
 library.movies.create(
@@ -124,7 +124,7 @@ library.movies.create(
         duration: '1hr 30min',
         genre: 'Comedy',
         description: 'http://www.imdb.com/title/tt0196229/?ref_=nv_sr_2',
-        trailer: 'https://www.youtube.com/embed/20CRw3XdETA'
+        trailer: 'https://www.youtube.com/embed/YtQq0T3ExLs'
 )
 
 library.movies.create(
@@ -172,7 +172,7 @@ library.movies.create(
         duration: '1hr 56min',
         genre: 'Comedy',
         description: 'http://www.imdb.com/title/tt0088763/',
-        trailer: 'https://www.youtube.com/embed/cdnoqCViqUo'
+        trailer: 'https://www.youtube.com/embed/qvsgGtivCgs'
 )
 
 library.movies.create(
@@ -188,7 +188,7 @@ library.movies.create(
         duration: '1hr 59min',
         genre: 'Comedy',
         description: 'http://www.imdb.com/title/tt0396269/',
-        trailer: 'https://www.youtube.com/embed/NJQ4qEWm9lU'
+        trailer: 'https://www.youtube.com/embed/omI8i1a7rlQ'
 )
 
 library.movies.create(
