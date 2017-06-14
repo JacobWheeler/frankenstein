@@ -1,5 +1,6 @@
 <h2>Welcome <%= current_user.first_name %> </h2>
 
+
 <% if current_user.movies.any?%>
     <%current_user.movies do |movie|%>
     <ul>
